@@ -1,0 +1,151 @@
+.p-card {
+  display: flex;
+  gap: 15px;
+  background-color: #f2f0f2;
+  width: 90%;
+  margin: 0px auto;
+  border-radius: 60px 60px 60px 20px;
+  overflow: hidden;
+}
+
+.p-card .image-crousel {
+  display: flex;
+  width: 300px;
+  height: fit-content;
+}
+
+.p-card .image-crousel img {
+  width: 300px !important;
+  max-height: 200px;
+}
+
+.p-card .details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+.p-card .details h2 {
+  text-transform: capitalize;
+  color: #1b1c57;
+}
+
+.p-card .tags-1,
+.p-card .tags-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.p-card .icon {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+
+.p-card .price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.p-card .icon-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 10px;
+  background-color: #10b981;
+  border-radius: 24px;
+  color: white;
+  gap: 10px;
+  font-size: small;
+  height: fit-content;
+}
+
+/* slider */
+.p-card .slick-arrow {
+  display: none !important;
+}
+
+.p-card .slick-slide div {
+  height: 200px !important;
+}
+/* a light green circle loader */
+.loader-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 200px;
+  position: absolute;
+  margin: 0 auto;
+}
+
+.image-crousel .loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #10b981;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .prop-des {
+    font-size: 0.75rem !important;
+    padding-bottom: 0 !important;
+  }
+  .amenties-cont {
+    margin-bottom: 4px !important;
+  }
+  .amenties-cont-2 {
+    row-gap: 4px !important;
+    gap: 5px !important;
+    margin-bottom: 0 !important;
+  }
+  .prop-price {
+    font-size: 0.75rem !important;
+  }
+  .amenties-cont-2 span {
+    font-size: 0.55rem !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .prop-card {
+    height: 150px !important;
+  }
+  .image-cont {
+    width: 230px !important;
+    height: 150px !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .prop-card {
+    height: 320px !important;
+    flex-direction: column !important;
+  }
+  .image-cont {
+    margin: auto !important;
+    width: 250px !important;
+    height: 200px !important;
+  }
+  .search-bar input {
+    padding: 2px 7px;
+    font-size: 0.55rem;
+  }
+}

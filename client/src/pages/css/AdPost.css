@@ -1,0 +1,149 @@
+.ad-post-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+  max-width: 600px;
+  margin: auto;
+  padding-top: 120px;
+}
+
+.ad-post-title {
+  color: #1b1c57;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ad-post-form .form-group {
+  margin-bottom: 15px;
+}
+
+.ad-post-form label {
+  display: block;
+  color: #1b1c57;
+  margin-bottom: 5px;
+}
+
+.ad-post-form input,
+.ad-post-form textarea,
+.ad-post-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.ad-post-form .form-group div {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="checkbox"] {
+  width: fit-content;
+}
+
+.ad-post-form .form-group .item-label {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  color: #1b1c57;
+}
+
+.ad-post-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.ad-post-form .form-group label input,
+.ad-post-form .form-group select {
+  margin-right: 10px;
+}
+
+.sub-btn-group {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-btn {
+  background-color: #10b981;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  width: fit-content;
+}
+
+.submit-btn:hover {
+  background-color: #10b981;
+}
+
+/* city label */
+.city-lbl {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ad-post-container .location-btn {
+  background-color: #10b981;
+  color: white;
+  padding: 2px 10px;
+}
+
+.ad-post-form input[type="radio"] {
+  margin-right: 10px;
+  width: fit-content;
+}
+
+@media screen and (max-width: 667px) {
+  .form-group label {
+    font-size: 0.85rem;
+  }
+  .ad-post-form input,
+  .ad-post-form textarea,
+  .ad-post-form select {
+    padding: 6px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+  }
+  .ad-post-form {
+    width: 80%;
+    margin: auto;
+  }
+  .submit-btn {
+    padding: 5px 15px;
+    font-size: 12px;
+  }
+  .ad-post-container .location-btn {
+    padding: 1px 7px;
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .form-group label, .form-group div p {
+    font-size: 0.75rem ;
+  }
+  .ad-post-form input,
+  .ad-post-form textarea,
+  .ad-post-form select {
+    padding: 3px;
+    font-size: 0.65rem;
+  }
+  .ad-post-form {
+    width: 90%;
+    margin: auto;
+  }
+  .submit-btn {
+    padding: 3px 10px;
+    font-size: 10px;
+  }
+  .ad-post-container .location-btn {
+    padding: 1px 7px;
+    font-size: 0.65rem;
+  }
+}

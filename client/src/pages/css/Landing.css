@@ -1,0 +1,745 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+section {
+  overflow: hidden;
+}
+
+/* welcome section */
+.landing .section-1,
+.landing .section-3 .content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.landing .section-1::after {
+  content: "";
+  height: 300px;
+  width: 300px;
+  background-color: #10b981;
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10% 30% 2% 15%;
+  filter: blur(100px);
+}
+
+.landing .section-1 .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 6%;
+  width: 50%;
+}
+
+.landing .section-1 .left .content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 500px;
+  margin-top: 50px;
+}
+
+.landing .section-1 .left .content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1b1c57;
+  height: 200px;
+}
+
+.landing .section-1 .left .content h1 span {
+  font: 800 3rem Arial;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px;
+}
+
+.landing .searchbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 5px;
+  border-radius: 30px;
+  max-width: 500px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.landing .searchbar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+}
+
+.landing .searchbar a {
+  padding: 10px 20px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  width: fit-content;
+}
+
+.landing .section-1 .location-icon {
+  margin-left: 20px;
+  color: rgb(255, 187, 0);
+}
+
+.landing .section-1 .right {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 50%;
+  z-index: -1;
+}
+
+.landing .section-1 .right img {
+  width: 100%;
+}
+
+/* Reccomendation section */
+.landing .reccomendation,
+.landing .ready-to-sell {
+  font-size: 1rem;
+  color: #f59e0b;
+  position: relative;
+  padding: 0 6%;
+}
+
+.landing .reccomendation::after,
+.landing .ready-to-sell::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 1.5px;
+  background-color: #f59e0b;
+  position: absolute;
+  left: 45px;
+  top: 50%;
+}
+
+.landing .section-2 h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b1c57;
+  margin: 20px 0;
+}
+
+.landing .section-2 .mini-navs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 6%;
+}
+
+.types {
+  --bg-offset: 0%;
+  display: flex;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.types::after {
+  content: "";
+  width: 33.33%;
+  height: 100%;
+  background: rgba(44, 222, 115, 0.5);
+  position: absolute;
+  top: 0;
+  left: var(--bg-offset);
+  transition: left 0.3s;
+}
+
+.types > button {
+  width: 168px;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.types > button.active {
+  color: #047857;
+  transition: color 0.3s;
+}
+
+.types > button:not(:last-of-type) {
+  border-right: 1px solid #eee;
+}
+
+.types svg {
+  font-size: 1rem;
+}
+
+.landing .section-2 .mini-navs .swipes {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.landing .section-2 .mini-navs .swipes svg {
+  padding: 20px;
+  background-color: #b2b3bd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* recommended items */
+.recommended-items {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.recommended-items > * {
+  min-width: 300px;
+  flex-shrink: 0;
+}
+
+/* section 3 - ready to sell */
+
+.landing .section-3 {
+  padding: 3% 6%;
+  position: relative;
+}
+
+.landing .section-3 .content {
+  margin-left: 6%;
+}
+
+.landing .section-3::after {
+  content: "";
+  height: 250px;
+  width: 250px;
+  background: linear-gradient(red, yellow);
+  opacity: 0.5;
+  position: absolute;
+  right: -150px;
+  top: 25%;
+  z-index: -1;
+  border-radius: 10% 30% 2% 15%;
+  filter: blur(100px);
+}
+
+.landing .section-3 .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  width: 50%;
+}
+
+.landing .section-3 .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.landing .section-3 .left h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b1c57;
+}
+
+.landing .section-3 .left button {
+  width: fit-content;
+  background-color: #10b981;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.landing .section-3 .left .contact {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.landing .section-3 .left .contact img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.landing .section-3 .left .contact h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+}
+
+.landing .section-3 .left .contact p {
+  font-size: 0.8rem;
+  color: #626687;
+}
+
+.landing .section-3 .right img {
+  width: 75%;
+}
+
+/* section-4 : reviews */
+
+.landing .section-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 0;
+  gap: 10px;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+.landing .section-4 h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b1c57;
+  margin-bottom: 20px;
+}
+
+.landing .section-4 .review-text {
+  position: relative;
+  color: #f59e0b;
+}
+
+.landing .section-4 .review-text::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 2px;
+  background-color: #f59e0b;
+  position: absolute;
+  left: 45px;
+  top: -5px;
+}
+
+/* section-5 : subscribe */
+
+.landing .section-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 6%;
+  position: relative;
+}
+
+.landing .section-5 .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #8db6fa, #f0f8f8, #e9e6ef);
+  width: 90%;
+  height: 300px;
+  border-radius: 50px;
+}
+
+.landing .section-5 .content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b1c57;
+  text-align: center;
+}
+
+.landing .section-5 div {
+  flex-wrap: wrap;
+}
+
+.landing .emailbar .email-icon {
+  margin-left: 20px;
+  color: #3b82f6;
+}
+
+/* slick */
+
+.slick-slider {
+  width: 100%;
+}
+
+.slick-slide {
+  width: fit-content;
+}
+
+.slick-track {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+  .landing .section-1 .left .content h1 {
+    font-size: 2rem;
+    height: 140px;
+  }
+  .landing .section-1 .left {
+    width: 45%;
+  }
+
+  .landing .section-1 .left .content p {
+    font-size: 0.9rem;
+    text-align: justify;
+    width: 80%;
+  }
+  .landing .searchbar {
+    width: 91%;
+    min-width: 100px;
+    padding: 3px;
+    gap: 5px;
+  }
+  .landing .section-1 .location-icon {
+    margin-left: 10px;
+  }
+  .landing .searchbar input {
+    padding: 3px;
+  }
+  .landing .searchbar a {
+    padding: 6px 15px;
+  }
+
+  .landing .reccomendation,
+  .landing .ready-to-sell {
+    font-size: 0.8rem;
+    padding: 0 100px;
+  }
+
+  .landing .section-2 h2 {
+    font-size: 1.5rem;
+  }
+  .landing .section-2 .mini-navs .swipes svg {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .landing .section-2 .mini-navs .swipes svg {
+    padding: 10px;
+  }
+  .types > button {
+    width: 100px;
+    font-size: 0.55rem;
+    padding: 0.3rem 0.5rem;
+    gap: 4px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .landing {
+    gap: 30px;
+  }
+  .landing .section-1 .left .content h1,
+  .landing .section-3 .left h1 {
+    font-size: 1.5rem;
+    width: 80%;
+    height: 100px;
+  }
+  .landing .section-3 .left h1 {
+    height: 70px;
+  }
+  .landing .section-1::after {
+    height: 250px;
+    width: 250px;
+  }
+
+  form.searchbar svg {
+    height: 10px;
+  }
+  .landing .searchbar input {
+    padding: 2px;
+    font-size: 0.7rem;
+  }
+  .landing .searchbar a {
+    padding: 0px 9px;
+    font-size: 0.75rem;
+  }
+  .landing .searchbar {
+    width: 80%;
+    padding: 1px 2px;
+    gap: 3px;
+    border: none;
+  }
+  .landing .section-1 .location-icon {
+    margin-left: 5px;
+  }
+  p,
+  .landing .section-3 .left .contact h3 {
+    font-size: 0.8rem;
+  }
+  .landing .section-3 .left .contact p {
+    font-size: 0.6rem;
+  }
+  .landing .section-3 .left {
+    gap: 10px;
+    width: 45%;
+  }
+  .landing .section-3 .right {
+    width: 55%;
+  }
+  .landing .section-3 .right img {
+    width: 82%;
+  }
+  .landing .section-3 .left .contact {
+    gap: 5px;
+  }
+  .landing .section-3 .left button {
+    font-size: 0.8rem;
+  }
+  .landing .section-3 .left .contact img {
+    width: 40px;
+  }
+  .contact-details,
+  .location-section,
+  .subscribe-section {
+    margin-top: 15px;
+  }
+  .landing .section-5 .content {
+    height: 180px;
+  }
+  .content .emailbar {
+    width: 45%;
+  }
+  .landing .section-5 .content h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  p,
+  .landing .section-3 .left .contact h3 {
+    font-size: 0.6rem;
+  }
+  .landing .section-3 {
+    padding: 2% 4%;
+  }
+  .landing .section-1 .left .content {
+    gap: 10px;
+  }
+  .landing .section-1 .left .content {
+    font-size: 0.7px;
+  }
+  .landing .section-1 .left .content h1,
+  .landing .section-3 .left h1 {
+    font-size: 1.5rem;
+    width: 80%;
+    height: 100px;
+  }
+  .landing .section-1 .left .content p {
+    font-size: 0.6rem;
+  }
+  .landing .section-1 .right {
+    width: 48%;
+  }
+  .landing .searchbar input {
+    font-size: 0.5rem;
+  }
+  .landing .searchbar a {
+    padding: 0px 5px;
+    font-size: 0.55rem;
+  }
+  .landing .section-1::after {
+    height: 200px;
+    width: 200px;
+  }
+  .landing .section-2 .mini-navs .swipes svg {
+    padding: 5px;
+    height: 15px;
+  }
+  .landing .section-3 .left h1 {
+    font-size: 1.2rem;
+    width: 80%;
+    height: 60px;
+  }
+  .description-section,
+  .contact-details,
+  .section {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  .landing .section-3 .left button {
+    font-size: 0.6rem;
+    gap: 0px;
+  }
+  .landing .section-3 .left button svg {
+    height: 0.6rem;
+  }
+
+  .btn {
+    padding: 3px 2px;
+    padding-right: 4px;
+  }
+
+  .landing .section-4 h2 {
+    font-size: 1.2rem;
+  }
+
+  .landing .section-2 .mini-navs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .landing .section-2 h2 {
+    margin-bottom: 0px;
+  }
+
+  .landing .section-2 .mini-navs .swipes {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .landing .section-3 .content {
+    margin-left: 0%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landing .reccomendation,
+  .landing .ready-to-sell,
+  .landing .review-text {
+    text-align: center;
+  }
+
+  .landing .reccomendation::after,
+  .landing .ready-to-sell::after,
+  .landing .section-4 .review-text::after {
+    width: 100px;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 50%);
+  }
+
+  .landing .section-3 .left {
+    text-align: center;
+  }
+
+  .landing .section-3 h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+    width: 100% !important;
+  }
+
+  .landing .section-1 .right {
+    display: none;
+  }
+
+  .landing .section-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landing .section-1 .left {
+    width: 80%;
+  }
+
+  .landing .section-1 .left .content {
+    width: 100%;
+    align-items: center;
+    margin-top: 75px;
+  }
+
+  .landing .section-1 .left .content h1 {
+    width: 70%;
+  }
+
+  .landing .section-1 .left .content p {
+    width: 70%;
+  }
+
+  .landing .searchbar {
+    width: 60%;
+    margin-top: 20px;
+  }
+  .landing .section-3 .left {
+    width: 80%;
+    align-items: center;
+  }
+  .landing .section-4 h2 {
+    text-align: center;
+  }
+  .landing .section-3 .right{
+    width: 100%;
+  }
+
+  .landing .searchbar{
+    margin-bottom: 30px;
+  }
+  .landing .section-1 .left{
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .landing .section-5 {
+    padding: 0;
+  }
+  .landing .section-5 .content {
+    gap: 0px;
+    border-radius: 0px;
+    width: 100%;
+  }
+
+  .landing .section-5 .content h1{
+    width: 90%;
+    font-size: .85rem; ;
+  }
+
+  .landing{
+    gap: 0px;
+  }
+
+  section{
+    margin-top: 20px;
+  }
+
+  .section-1{
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .landing .section-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landing .section-1 .left {
+    width: 80%;
+  }
+
+  .landing .section-1 .left .content {
+    width: 100%;
+    align-items: center;
+    margin-top: 75px;
+  }
+
+  .landing .section-1 .left .content h1 {
+    width: 90%;
+  }
+
+  .landing .section-1 .left .content p {
+    width: 90%;
+  }
+
+  .landing .searchbar {
+    width: 70%;
+    margin-top: 20px;
+  }
+}

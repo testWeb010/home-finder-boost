@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin-panel/
+Disallow: /profile/
+Disallow: /checkout
+Disallow: /new-post
+Allow: /all-properties/
+Allow: /property/*
+Allow: /subscriptions
+
+Sitemap: https://www.thehomedaze.com/sitemap.xml

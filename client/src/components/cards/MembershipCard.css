@@ -1,0 +1,14 @@
+.Pro{
+    border: 2px solid #10b981 !important;
+}
+
+.Pro::after{
+    content: "Most Popular";
+    position: absolute;
+    top: 0;
+    background: #10b981;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 0 10px 10px;
+    font-size: 0.8rem;
+}

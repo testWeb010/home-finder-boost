@@ -1,0 +1,148 @@
+.review-card {
+  border-radius: 24px;
+  background-color: #ffffff;
+  position: relative;
+  width: 480px;
+  min-height: 450px;
+  max-width: 500px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  margin: auto;
+}
+
+.review-card .property-img {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-card .property-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.review-card .property-img img:hover {
+  transform: scale(1.05);
+}
+
+.review-card .content {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  text-align: left;
+  position: absolute;
+  top: 40%;
+  z-index: 99;
+  width: 80%;
+  left: 6%;
+  border-radius: 15px;
+}
+
+.review-card .content h3 {
+  font-size: 1rem;
+  color: #1b1c57;
+  margin-bottom: 10px;
+}
+
+.review-card .content p {
+  font-size: 0.75rem;
+  color: #777;
+  line-height: 1.6;
+}
+
+.review-card .user-info {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.review-card .user-info img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.review-card .user-info div {
+  margin-right: auto;
+}
+
+.review-card .user-info span {
+  display: block;
+  font-size: 0.85rem;
+  color: #0e1735;
+  font-weight: bold;
+}
+
+.review-card .user-info .detail {
+  width: 100%;
+}
+
+.review-card .user-info p {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.review-card .rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-card .rating .star {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  margin-right: 5px;
+}
+
+.review-card .rating img {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .review-card {
+    width: 300px;
+    min-height: 310px;
+  }
+  .review-card .property-img {
+    width: 100%;
+    height: 250px;
+  }
+  .review-card .content {
+    padding: 7px;
+    top: 60%;
+  }
+  .review-card .content h3 {
+    font-size: 0.7rem;
+    margin-bottom: 0;
+  }
+  .review-card .content p {
+    font-size: 0.55rem;
+    color: #777;
+    line-height: 1.2;
+  }
+  .review-card .user-info {
+    margin-top: 8px;
+  }
+  .review-card .user-info img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  .review-card .user-info span{
+    font-size: 0.5rem;
+  }
+  .review-card .rating .star{
+    font-size: .8rem;
+  }
+  .review-card .rating{
+    gap: 0;
+  }
+}

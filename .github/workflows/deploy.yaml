@@ -1,0 +1,57 @@
+name: Deploy to Render
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          registry: docker.io
+
+      # Step 2: Remove the previous image (if exists)
+      - name: Remove Previous Docker Image (if exists)
+        run: |
+          echo "Removing previous Docker image..."
+          docker images -q thehomedaze/homedaze:latest | xargs -r docker rmi
+
+      # Step 3: Build the Docker image
+      - name: Build Docker Image
+        run: |
+          echo "Building Docker image..."
+          docker build -t thehomedaze/homedaze:latest .
+
+      # Step 4: Push Docker image to Docker Hub
+      - name: Push Docker Image
+        run: |
+          echo "Pushing Docker image to Docker Hub..."
+          docker push thehomedaze/homedaze:latest
+
+      # Step 5: Trigger Deployment to Render
+      - name: Deploy to Render
+        env:
+          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+        run: |
+          echo "Triggering deployment to Render..."
+          curl -X POST "https://api.render.com/v1/services/${{ secrets.YOUR_SERVICE_ID }}/deploys" \
+            -H "Authorization: Bearer $RENDER_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d '{"clearCache":true}'
+
+      # Step 6: Verify Deployment (Optional)
+      - name: Verify Deployment
+        run: |
+          echo "Verifying deployment..."
+          curl -f https://${{ secrets.YOUR_RENDER_APP }}.onrender.com || exit 1
+        continue-on-error: true

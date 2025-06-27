@@ -1,0 +1,134 @@
+.feedback-section {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ratings-overview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-radius: 8px;
+}
+
+.rating-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rating-label {
+  font-size: 0.9rem;
+  color: #64748b;
+  min-width: 120px;
+}
+
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.rating-value {
+  font-weight: 600;
+  color: #0f172a;
+  margin-left: 0.5rem;
+}
+
+.feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feedback-item {
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.feedback-item:hover {
+  transform: translateY(-2px);
+}
+
+.feedback-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.feedback-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedback-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-user-name {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.feedback-date {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.feedback-rating {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.feedback-text {
+  color: #334155;
+  line-height: 1.6;
+}
+
+.no-feedback {
+  text-align: center;
+  padding: 2rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.feedback-loading {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .feedback-display-container {
+    padding: 16px;
+  }
+
+  .rating-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .rating-item {
+    padding: 8px;
+  }
+}

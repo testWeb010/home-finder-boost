@@ -1,0 +1,119 @@
+.a-p {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding-top: 80px;
+}
+
+.a-drawer {
+  width: 20%;
+  min-width: 150px;
+  max-width: 200px;
+  background-color: #dcfef2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 89vh;
+  padding-top: 15px;
+}
+
+.a-drawer a {
+  margin: 2px 10px;
+  margin-left: 15px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.a-drawer a.selected, .a-drawer a:hover{
+  background-color: #10b981;
+  color: white;
+  transition: ease-in-out 0.2s ;
+}
+
+.a-drawer a.selected::after {
+  content: "";
+  border: 3px solid #10b981;
+  border-radius: 0px 5px 5px 0px;
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;
+}
+
+.a-content{
+  padding: 20px;
+  width: -webkit-fill-available;
+}
+
+.logout-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a dim background overlay */
+  z-index: 1000;
+}
+
+.logout-popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  width: 350px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transform: translateY(-500px); /* Initial transform for animation */
+  animation: slideUp 0.4s ease-out forwards; /* Use 'forwards' to retain final state */
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logout-popup-content p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+
+.logout-popup-content div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout-popup-content button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-popup-content button:nth-child(1) {
+  background-color: #10b981;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.logout-popup-content button:nth-child(2) {
+  background-color: #FF0000;
+  color: #ffffff;
+  margin-left: 10px;
+}
