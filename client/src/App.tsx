@@ -90,7 +90,7 @@ function App(): JSX.Element {
         <Route path="/verify-email/:token" element={<EmailVerification />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route path="/google-auth-success" element={<GoogleSuccess />} />
-        <Route path="*subscription" element={<Subscription />} />
+        <Route path="/subscription" element={<Subscription />} />
         <Route path="/subscriptions" element={<Subscription />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/cancellation-policy" element={<CancellationPolicy />} />
