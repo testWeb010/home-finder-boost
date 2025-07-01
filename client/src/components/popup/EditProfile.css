@@ -1,0 +1,173 @@
+.edit-profile-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-profile-container .content {
+  width: 500px;
+  height: fit-content;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.edit-profile-container .content .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.edit-profile-container .content form {
+  width: 300px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  row-gap: 20px;
+  margin: 60px auto;
+}
+
+.edit-profile-container .form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 14px;
+}
+
+.edit-profile-container .form-group input[type="text"] {
+  width: -webkit-fill-available;
+  background-color: #d2f9ec;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.edit-profile-container .availibility-btn {
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-profile-container .availibility-btn .error {
+  color: red;
+}
+
+.edit-profile-container .availibility-btn .success {
+  color: green;
+}
+
+.edit-profile-container button[type="submit"] {
+  background-color: #10b981;
+  color: white;
+  width: fit-content;
+  align-items: end;
+}
+
+.availibility-btn .btn {
+  padding: 5px;
+  font-size: 10px;
+  background-color: transparent;
+}
+
+/* image */
+.edit-profile-container .img-group {
+  position: relative;
+  align-items: center;
+}
+
+.edit-profile-container .img-group input {
+  display: none;
+}
+
+.edit-profile-container .img-group .edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 35%;
+}
+
+.edit-profile-container .edit-icon .icon {
+  font-size: 20px;
+  background-color: #10b981;
+  border-radius: 50%;
+  padding: 2px;
+  color: white;
+}
+
+.edit-profile-container .img-group img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* responsiveness */
+@media screen and (max-width: 768px) {
+  .edit-profile-container .content {
+    width: 350px;
+  }
+
+  .edit-profile-container .content form {
+    width: 270px;
+  }
+
+  .edit-profile-container label,
+  .edit-profile-container input {
+    font-size: 12px;
+  }
+  .availibility-btn .btn,
+  .edit-profile-container .availibility-btn .error,
+  .edit-profile-container .availibility-btn .success {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .edit-profile-container .content {
+    width: 300px;
+  }
+
+  .edit-profile-container .content form {
+    width: 250px;
+    margin: 30px auto;
+  }
+
+  .edit-profile-container label,
+  .edit-profile-container input,
+  .edit-profile-container button {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .edit-profile-container .content {
+    width: 250px;
+  }
+
+  .edit-profile-container .content form {
+    width: 200px;
+    margin: 30px auto;
+  }
+
+  .edit-profile-container label,
+  .edit-profile-container input {
+    font-size: 8px;
+  }
+  .availibility-btn .btn,
+  .edit-profile-container .availibility-btn .error,
+  .edit-profile-container .availibility-btn .success {
+    font-size: 6px;
+  }
+}

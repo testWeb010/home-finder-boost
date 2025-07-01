@@ -1,0 +1,57 @@
+/* Dashboard Container */
+.d-dashboard {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+  }
+  
+  /* Title */
+  .d-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Stats Container */
+  .d-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Individual Stat */
+  .d-stat {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    margin: 0 10px; /* Add some space between cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .d-stat:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+  }
+  
+  /* Stat Title */
+  .d-stat-title {
+    font-size: 1.5em;
+    color: #555;
+  }
+  
+  /* Stat Value */
+  .d-stat-value {
+    font-size: 2em;
+    color: #10b981; /* Bootstrap primary color */
+  }
+  
+  /* Loading and Error States */
+  .d-loading,
+  .d-error {
+    text-align: center;
+    font-size: 1.2em;
+    color: #999;
+  }
+  

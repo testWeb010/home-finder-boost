@@ -1,0 +1,111 @@
+.outer-subs-cont::after {
+  content: "";
+  height: 300px;
+  width: 300px;
+  background-color: #10b981;
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10% 30% 2% 15%;
+  filter: blur(100px);
+  top: 0;
+}
+
+.subscription-header {
+  padding: 20px;
+  text-align: center;
+  padding-top: 120px;
+}
+
+.subscription-header h1 {
+  font-size: 2.5rem;
+  color: #1b1c57;
+  margin-bottom: 20px;
+}
+
+.cont {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.faq-section {
+  padding: 6%;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.accordion-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.open {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding: 0 0 20px;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 800px) {
+  .subscription-header {
+    padding-top: 70px;
+  }
+  .subscription-header h1 {
+    font-size: 1.5rem;
+  }
+  .cont {
+    flex-direction: column;
+    height: 100%;
+  }
+  .faq-section {
+    padding: 10%;
+  }
+  .faq-section h2 {
+    font-size: 1.5rem;
+  }
+  .accordion {
+    width: 100%;
+  }
+  .faq-section button {
+    font-size: 1rem;
+  }
+  .accordion-content {
+    font-size: 0.9rem;
+  }
+}

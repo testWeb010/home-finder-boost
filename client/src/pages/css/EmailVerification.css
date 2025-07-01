@@ -1,0 +1,31 @@
+.verification-outer {
+  background-color: aquamarine;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.verification-outer .container p {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1b1c57;
+  font-size: 50px;
+  gap: 20px;
+}
+
+.verification-outer .container .success {
+  color: #10b981;
+}
+
+.verification-outer .container .error {
+  color: red;
+}
+
+.verification-outer .container .redirect {
+  font-size: 16px;
+}

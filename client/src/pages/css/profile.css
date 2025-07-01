@@ -1,0 +1,410 @@
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin: 50px 150px;
+  margin-top: 0px;
+  height: 450px;
+  gap: 30px;
+  padding-top: 120px;
+}
+
+.profile-container button {
+  width: fit-content;
+}
+
+.change-password div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-container .left-section {
+  width: 25%;
+  min-width: 200px;
+  display: flex;
+  height: -webkit-fill-available;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: #edfff9;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.profile-container .left-section img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 30px;
+  border: 1px solid black;
+}
+
+.profile-container .left-section h2 {
+  margin-top: 10px;
+  color: #10b981;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.profile-container .left-section p {
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.profile-container .left-section .upvote {
+  margin-top: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.profile-container .left-section .upvote .upvoteIcon {
+  font-size: 16px;
+}
+
+.profile-container .left-section .profile-views {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.profile-container .left-section .edit-profile {
+  margin-top: 10px;
+  background-color: #10b981;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 25px;
+}
+
+.profile-container .profile-analysis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container .right-section {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-container .right-section .nav-items {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.profile-container .right-section .nav-items a {
+  text-decoration: none;
+  color: #10b981;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 5px 20px;
+  border-radius: 24px;
+  transition: 0.3s;
+}
+
+.profile-container .right-section .nav-items .selected {
+  background-color: #10b981;
+  color: white;
+}
+
+/* content */
+
+.profile-container .loader-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container .content {
+  width: 100%;
+  height: -webkit-fill-available;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #edfff9;
+}
+
+/* my profile */
+
+.profile-container .content .profile {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 20px;
+  width: 400px;
+}
+
+.profile-container .content .profile p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-container .change-password {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  /* width: 500px; */
+  height: 100%;
+}
+
+.profile-container .change-password form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.profile-container .change-password input {
+  width: 300px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  background-color: #efe5ff;
+}
+
+.profile-container .change-password button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #10b981;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+  display: block;
+  margin: auto;
+}
+
+.profile-container .change-password button:hover {
+  background-color: #6d4c8b;
+}
+
+.profile-container .change-password label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* posts */
+
+.profile-container .content .posts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px;
+  overflow-x: auto;
+}
+
+.profile-container .content .posts .post {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.profile-container .content .posts .post .post-title {
+  font-size: 14px;
+  color: #10b981;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.profile-container .content .posts .post .post-description {
+  font-size: 12px;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: black;
+}
+
+.small-text{
+  font-size: .65rem;
+}
+
+.post-top{
+  display: flex;
+  justify-content: space-between;
+}
+.post-left{
+  width: 80%;
+}
+
+.post-right{
+  width: 20%;
+  display: flex;
+  justify-content: end;
+  height: fit-content;
+  gap: 5px;
+}
+
+.post-right .edit-btn, .post-right .delete-btn{
+  color: white;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.post-right .edit-btn{
+  background-color: #10b981;
+}
+.post-right .delete-btn{
+  background-color: red;
+}
+.profile-container .content .post-bottom {
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  row-gap: 5px;
+  color: black;
+  justify-content: start;
+}
+.profile-container .post-bottom .amenity {
+  padding: 2px 5px;
+  font-size: 0.5rem;
+}
+
+.profile-container .post-bottom .amenity svg{
+  width: .75rem;
+}
+
+.profile-container .loading {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #10b981;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .profile-container .right-section .nav-items a {
+    font-size: 12px;
+  }
+  .profile-container .content .profile p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .profile-container {
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+    margin-top: 10px;
+    align-items: center;
+    height: 100%;
+  }
+  .profile-container .left-section {
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    height: fit-content;
+  }
+  .profile-container .left-section .edit-profile {
+    position: absolute;
+    right: 10px;
+    transform: translate(1px, -5px);
+  }
+  .profile-container .profile-analysis {
+    align-items: start;
+  }
+  .profile-container .profile-analysis h2 {
+    font-size: 12px;
+    margin: 0;
+  }
+  .profile-container .left-section .profile-analysis p {
+    font-size: 10px;
+    margin: 0;
+  }
+  .profile-container .left-section img {
+    height: 50px;
+    width: 50px;
+    margin: 0px;
+  }
+  /* right */
+  .profile-container .right-section {
+    width: 80%;
+    height: -webkit-fill-available;
+  }
+  .profile-container .content .profile,
+  .profile-container .change-password {
+    padding: 20px;
+  }
+  .membership-tag{
+    top: 28px !important;
+    padding: 0px 5px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-container{
+    padding-top: 70px;
+  }
+  .profile-container .content .profile,
+  .profile-container .change-password {
+    padding: 10px;
+  }
+  .profile-container .right-section {
+    gap: 10px;
+  }
+  .profile-container .content .profile {
+    width: 90%;
+    margin-top: 10px;
+  }
+  .profile-container .right-section .nav-items {
+    gap: 0px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .profile-container .right-section .nav-items a {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .profile-container .right-section .profile p {
+    font-size: 10px;
+  }
+  .profile-container .left-section .edit-profile {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .profile-container .change-password input {
+    width: 210px;
+  }
+}

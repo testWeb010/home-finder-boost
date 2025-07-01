@@ -1,0 +1,159 @@
+.add-media-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  text-align: center;
+  animation: fadeUp 0.5s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    /* transform: translateY(20px); */
+  }
+  to {
+    opacity: 1;
+    /* transform: translateY(0); */
+  }
+}
+
+.add-media-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-media-container .input-group {
+  margin-bottom: 20px;
+}
+
+.add-media-container .input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.add-media-container .input-group input {
+  display: block;
+  width: fit-content;
+  margin: auto;
+}
+
+.add-media-container .preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  margin: 30px 0px;
+}
+
+.add-media-container .media-card {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: auto;
+}
+
+.add-media-container .media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.add-media-container .delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.add-media-container .video-preview {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #000;
+  overflow: hidden;
+  margin: auto;
+}
+
+.add-media-container .video-preview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.add-media-container .video-preview .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.add-media-container .submit-btn {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-media-container .submit-btn:hover {
+  background-color: #218838;
+}
+
+@media screen and (max-width: 768px) {
+  .add-media-container h2 {
+    font-size: 1.2rem;
+    color: #1b1c57;
+  }
+  .add-media-container .input-group label {
+    font-size: 0.75rem;
+  }
+  .add-media-container .input-group input {
+    font-size: 0.55rem;
+  }
+  .add-media-container .submit-btn {
+    padding: 5px 15px;
+    font-size: 0.85rem;
+  }
+  .add-media-container .media-card {
+    width: 100px;
+    height: 100px;
+  }
+  .add-media-container .delete-btn {
+    top: 3px;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+  }
+  .add-media-container .video-preview{
+    height: 150px;
+    width: 250px;
+  }
+}

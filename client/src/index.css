@@ -1,0 +1,237 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Lavishly+Yours&family=Lugrasimo&family=Numans&family=Tangerine:wght@400;700&display=swap");
+
+p,
+a,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+label,
+li,
+span,
+option,
+select,
+div {
+  font-family: "Numans", sans-serif !important;
+  font-optical-sizing: auto;
+  color: #626687;
+  line-height: 1.5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  height: fit-content;
+}
+
+textarea,
+input,
+select,
+button {
+  width: 100%;
+  padding: 8px;
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.blur {
+  filter: blur(3px);
+  user-select: none;
+}
+
+/* loader */
+/* 
+<div className="loader" style={{ display: isLoading ? "flex" : "none" }}>
+  <img src={Logo} alt="logo" />
+  <p>Loading...</p>
+</div>
+*/
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  user-select: none;
+}
+
+.loader img {
+  width: 60px;
+}
+
+/* Content loader */
+
+/* 
+  <div className="content-loader-container">
+    <span class="content-loader"></span>
+  </div>
+*/
+.content-loader-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.content-loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite, colorChange 2s linear infinite;
+}
+
+.u-delete-button {
+  background-color: #f87171;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.u-edit-button {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.o-eye-button {
+  background-color: #4a5568;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.content-loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-top: 4px solid #000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Color change animation */
+@keyframes colorChange {
+  0% {
+    border-top-color: #1b1c57;
+  }
+  50% {
+    border-top-color: #10b981;
+  }
+  100% {
+    border-top-color: #1b1c57;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .btn {
+    padding: 5px 12px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .mem-card {
+    width: 230px !important;
+    padding: 23px 14px !important;
+  }
+}

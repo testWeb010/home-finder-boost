@@ -1,0 +1,64 @@
+.property-card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 325px;
+    height: 450px;
+    border-radius: 24px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.property-card .img-container{
+    position: relative;
+}
+
+.property-card .img-container .tag{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    border-radius: 24px;
+}
+
+.property-card .img-container .New{
+    background-color: #DBEAFE;
+    color: #1D4ED8;
+}
+
+.property-card .img-container .Popular{
+    background-color: #FEE2E2;
+    color: #EF4444;
+}
+
+.property-card .img-container .Best{
+    background-color: #D1FAE5;
+    color: #047857;
+}
+
+.property-card img{
+    width: 100%;
+    height: 365px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.property-card h3{
+    font-size: 1.5rem;
+    color: #0E1735;
+}
+
+.property-card h4{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #626687;
+}
+
+.property-card p{
+    font-size: 0.9rem;
+    color: #626687;
+}

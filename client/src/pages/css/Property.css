@@ -1,0 +1,505 @@
+.container-wrapper {
+  margin: 0 auto;
+  padding: 32px 16px;
+  width: 90%;
+  padding-top: 120px;
+}
+
+.grid-wrapper .media {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  gap: 10px;
+}
+
+.grid-wrapper .relative {
+  width: 100%;
+  aspect-ratio: 16 / 10; /* Use aspect-ratio instead of fixed height for better responsiveness */
+  background-color: #e5e7eb; /* A neutral background for letterboxing */
+  overflow: hidden; /* This is KEY for the zoom effect to not spill out */
+  border-radius: 8px;
+  display: flex; /* Helps center the image if needed */
+  align-items: center;
+  justify-content: center;
+}
+
+
+.grid-wrapper .media-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%; /* Make it fill the container */
+  
+  /* THIS IS THE FIX:
+     It ensures the ENTIRE image is visible without being cropped. */
+  object-fit: contain; 
+
+  /* Keep the border-radius on the image itself for a clean look */
+  border-radius: 8px; 
+  transition: transform 0.5s ease-in-out; /* Smoother transition */
+}
+/* it should zoom in same size */
+.main-image:hover {
+  transform: scale(1.1); /* Keeps the existing zoom effect */
+}
+
+
+.main-video {
+  width: 85%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.image-button {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #1b1c57;
+}
+
+.thumbnails-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  gap: 8px;
+  /* overflow-x: auto; */
+}
+
+.thumbnail {
+  width: 100px; /* Slightly larger thumbnails */
+  height: 75px;
+  object-fit: cover; /* Cover is fine for thumbnails */
+  border-radius: 6px; /* Slightly larger radius */
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.card-wrapper {
+  border: none;
+  box-shadow: none;
+}
+
+.card-content {
+  margin-top: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-content .details {
+  width: 55%;
+}
+
+.prices {
+  width: 40%;
+  position: static;
+}
+
+.price-detail {
+  font-size: 16px;
+  color: #626687;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.property-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1b1c57;
+  margin-bottom: 8px;
+}
+
+.media .media-types {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+}
+
+.media-types .btn {
+  display: flex;
+  align-items: center;
+}
+
+.property-location {
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.amenities-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.amenities-wrapper .amenities {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.amenity {
+  display: flex;
+  align-items: center;
+  color: #1b1c57;
+  font-size: 0.875rem;
+  background-color: #c6ede0;
+  padding: 4px 8px;
+  gap: 4px;
+  border-radius: 4px;
+}
+
+.amenity p {
+  margin: 0;
+  color: #1b1c57;
+  /* color: black; */
+}
+
+.icon-size {
+  height: 16px;
+  width: 16px;
+}
+
+.description-section,
+.contact-details,
+.section {
+  margin-bottom: 24px;
+  background-color: #f3f4f6;
+  padding: 15px;
+  gap: 20px;
+  border-radius: 8px;
+}
+
+.gender-tag {
+  background-color: #edc6c6;
+  color: #1b1c57;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  width: fit-content;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1b1c57;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.section-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.pricing-section {
+  background-color: #f3f4f6;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.pricing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1b1c57;
+  display: flex;
+  align-items: center;
+}
+
+.move-dates {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.guests-info {
+  text-align: right;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.pricing-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pricing-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.pricing-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.booking-button {
+  width: 100%;
+  background-color: #10b981;
+  color: white;
+}
+
+.contact-details,
+.location-section,
+.subscribe-section {
+  margin-top: 32px;
+}
+
+.map-placeholder {
+  height: 256px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.subscribe-button {
+  background-color: #10b981;
+  color: white;
+}
+
+.map-placeholder .subscription-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.map-placeholder .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: -webkit-fill-available;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-details .section-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-details .section-title span {
+  padding: 0;
+  background-color: #10b981;
+  color: white;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.875rem;
+}
+
+.contact-details .details {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.contact-details .user {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-details .user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.contact-details .user .user-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1b1c57;
+}
+
+.details .contact p {
+  text-align: right;
+}
+
+.media-type-btn {
+  width: fit-content;
+}
+
+.recommendations-section {
+  padding: 2rem 4rem;
+  background-color: #f8f9fa;
+  margin-top: 2rem;
+}
+
+.feedback-section {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.recommendations-section h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.recommendations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .recommendations-section {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .grid-wrapper .media {
+    width: 100%;
+  }
+  .card-content {
+    flex-direction: column;
+  }
+
+  .card-content .details,
+  .card-content .prices {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-wrapper {
+    padding-top: 80px;
+  }
+
+  .grid-wrapper .relative {
+    aspect-ratio: 4 / 3; 
+}
+
+
+  .main-image {
+    height: 300px;
+    width: 100%;
+  }
+
+  .main-video {
+    height: 300px;
+    width: 80%;
+  }
+
+  .property-title {
+    font-size: 1.2rem;
+  }
+  .property-location {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  .container-wrapper .description-section,
+  .container-wrapper .contact-details,
+  .container-wrapper .section {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
+  .amenity p {
+    font-size: 0.75rem;
+    padding: 0 2px;
+    gap: 4px;
+  }
+  .amenity svg,
+  .pricing-item,
+  .price-detail {
+    font-size: 0.75rem;
+  }
+
+  .container-wrapper .price {
+    font-size: 1.2rem;
+  }
+
+  .pricing-total span {
+    font-size: 1rem;
+    color: #1b1c57;
+  }
+  .pricing-total .price-detail {
+    color: red;
+  }
+  .map-placeholder {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-wrapper .media-wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+  .thumbnails-wrapper {
+    flex-direction: row;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .grid-wrapper .media {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .grid-wrapper .media-types {
+    flex-direction: row;
+    gap: 0;
+    margin-top: 10px;
+  }
+  .main-video {
+    width: 100%;
+  }
+  .amenity p {
+    font-size: 0.5rem;
+  }
+
+  .amenity svg {
+    height: 12px;
+    width: 12px;
+  }
+  .amenities-wrapper .amenities {
+    gap: 5px;
+  }
+  .thumbnail {
+    width: 60px;
+    height: 40px;
+  }
+}

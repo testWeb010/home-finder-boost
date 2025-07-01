@@ -1,0 +1,157 @@
+/* Team.css */
+
+/* Container */
+.d-team-page {
+  margin: 20px 0;
+  padding: 20px;
+}
+
+/* Header */
+.d-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2d3748; /* Gray */
+}
+
+/* Table Styles */
+.d-admin-table-container {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.d-admin-table {
+  min-width: 100%;
+  border-collapse: collapse;
+}
+
+.d-admin-table th {
+  padding: 0.75rem 1rem;
+  background-color: #f7fafc; /* Light gray */
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #a0aec0; /* Gray */
+}
+
+.d-admin-table td {
+  padding: 0.75rem 1rem;
+  background-color: white;
+  white-space: nowrap;
+}
+
+.d-admin-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 9999px; /* Full round */
+  object-fit: cover;
+}
+
+/* Action Button */
+.d-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem; /* Rounded */
+  background-color: #e2e8f0; /* Light gray */
+  color: #4a5568; /* Gray */
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.d-btn:hover {
+  background-color: #10b981; /* Teal */
+  color: white;
+}
+
+.d-icon {
+  margin-right: 5px;
+}
+
+/* Status Badges */
+.d-active-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px; /* Full round */
+  background-color: #c6f6d5; /* Light green */
+  color: #2f855a; /* Dark green */
+}
+
+.d-inactive-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px; /* Full round */
+  background-color: #fed7e2; /* Light red */
+  color: #c53030; /* Dark red */
+}
+
+/* Pagination */
+.o-pagination-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 20px;
+}
+
+.o-pagination-info {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.o-pagination-highlight {
+  font-weight: bold;
+}
+
+.o-pagination-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.o-pagination-button {
+  background-color: #e2e8f0; /* Light gray */
+  color: #4a5568; /* Gray */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem; /* Rounded */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.o-pagination-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.o-chevron-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.o-pagination-page {
+  background-color: #f7fafc; /* Light gray */
+  border: 1px solid #10b981; /* Teal */
+  color: #10b981;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem; /* Rounded */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.o-pagination-page:hover {
+  background-color: #10b981; /* Teal */
+  color: white;
+}
+
+.o-active-page {
+  background-color: #10b981; /* Teal */
+  color: white;
+  border: none;
+}
